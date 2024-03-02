@@ -1,0 +1,26 @@
+@import "./mixins";
+
+.getStart__description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-padding);
+    align-items: start;
+
+    &__bold{
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 7rem;
+    }
+
+    &__light{
+        @include lightFont(1.6rem, 3ren)
+    }
+}
+
+
+
+
+
+.description__btn {
+    margin-top: var(--default-padding);
+}

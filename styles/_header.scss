@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: calc(var(--default-padding) * 2);
+}
+
+.logoContent {
+    display: flex;
+    align-items: center;
+    gap: var(--default-padding);
+
+}
+
+.logoContent__logo {
+    width: 100%;
+}
+
+.logoContent__title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    color: var(--color-very-dark-blue);
+}
+
+.logoContent__title--span {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+}
+
+.navigation__list {
+    display: flex;
+    gap: var(--default-padding);
+    color: var(--font-light);
+}
+
+.auth {
+    display: flex;
+}

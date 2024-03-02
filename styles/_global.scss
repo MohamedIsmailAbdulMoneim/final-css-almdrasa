@@ -1,0 +1,52 @@
+h1 {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 7rem;
+    width: 55rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 5rem;
+}
+
+.container {
+    display: grid;
+    row-gap: 11rem;
+    margin: 0 auto;
+    max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--default-padding) * 2);
+}
+
+.btn {
+    outline: none;
+    border: none;
+    color: var(--color-very-dark-blue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.5rem 3rem ;
+    line-height: 1.9rem;
+}
+
+.btn--with-border {
+    border: 1px solid var(--button-border);
+    color: var(--button-border);
+    border-radius: 5rem;
+}
+
+.action {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    outline: none;
+    padding: 2rem 9rem;
+    border-radius: 1rem;
+    box-shadow: 0 27px 33px rgba(245, 56, 56, 0.35)
+
+
+}

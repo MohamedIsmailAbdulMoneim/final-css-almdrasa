@@ -1,0 +1,52 @@
+@import "./mixins";
+
+.features {
+    gap: calc(var(--default-padding) * 5);
+}
+
+.features__description {
+    margin-left: calc(var(--default-padding)* 3);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-padding)  / 2);
+    align-items: start;
+    justify-content: end;
+
+
+    &__heading{
+        width: 38.3rem;
+    }
+
+    &__light {
+        width: 42.8rem;
+        margin-bottom: var(--default-padding);
+        @include lightFont(1.6rem, 3rem);
+
+    }
+    
+    .features__pic {
+        height: 41.4rem;
+    }    
+}
+
+
+
+.features__list{
+    display: flex;
+    flex-direction: column;
+    @include lightFont(1.4rem, 3rem);
+    
+}
+
+
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--default-padding) / 2);
+    margin-bottom: var(--default-padding);
+}
+
+.feature:last-child {
+    margin-bottom: 0;
+}
