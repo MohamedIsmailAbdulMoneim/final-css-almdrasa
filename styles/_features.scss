@@ -20,7 +20,7 @@
     &__light {
         width: 42.8rem;
         margin-bottom: var(--default-padding);
-        @include lightFont(1.6rem, 3rem);
+        @include styleFont(500, 1.6rem, 3rem);
 
     }
     
@@ -34,7 +34,7 @@
 .features__list{
     display: flex;
     flex-direction: column;
-    @include lightFont(1.4rem, 3rem);
+    @include styleFont(400, 1.4rem, 3rem);
     
 }
 

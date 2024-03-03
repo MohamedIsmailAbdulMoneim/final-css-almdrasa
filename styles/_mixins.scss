@@ -1,7 +1,12 @@
-@mixin lightFont($size, $lineHeight) {
-    font-weight: 400;
+@mixin styleFont($weight, $size, $lineHeight, $light:true) {
+    font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
-    color: var(--font-light);
+    @if $light{
+      color: var(--font-light);
+    } @else {
+      color: var(--color-very-dark-blue);
+    }
+    
 
   }

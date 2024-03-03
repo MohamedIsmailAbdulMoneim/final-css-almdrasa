@@ -1,0 +1,99 @@
+@import "./mixins";
+
+.testimonials {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-padding) * 2);
+    align-items: center;
+
+    &__heading {
+        @include styleFont(500, 3.5rem, 5rem, false);
+        width: 38.3rem;
+        margin: var(--default-padding) auto;
+        
+    }
+
+    &__description {
+        width: 55.5rem;
+        margin: var(--default-padding) auto;
+        @include styleFont(400, 1.6rem, 3rem);
+        &__bold {
+            @include styleFont(500, 1.6rem, 3rem);
+        }
+    }
+
+    &__customers {
+        &__heading {
+            @include styleFont(500, 3.5rem, 5rem, false);
+            width: 44.8rem;
+            margin: var(--default-padding) auto;
+
+            &__description{ 
+                width: 55.5rem;
+                margin: var(--default-padding) auto;
+                @include styleFont(400, 1.6rem, 3rem);
+            }
+        }
+    }
+}
+
+.customers {
+    display: flex;
+    gap: calc(var(--default-padding));
+    // justify-content: ;
+    // flex-wrap: nowrap;
+    width: 110rem;
+}
+
+.customer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: calc(var(--default-padding) /2);
+    width: 36rem;
+    height: 24rem;
+    justify-items: end;
+    align-content: start;
+    // align-items: center;
+    padding: var(--default-padding);
+    border: 2px solid var(--grayed-borders);
+    border-radius: 1rem;
+
+   
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: var(--default-padding);
+
+        &__name {
+            @include styleFont(500, 1.8rem, 2rem, false);
+            width: 14.3rem;
+            text-align: left
+        }
+
+        &__address {
+            @include styleFont(400, 1.4rem, 2rem);
+            width: 12.7rem;
+            text-align: left;
+            
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--default-padding) / 2);
+    }
+
+    &__comment {
+        grid-column: 1/-1;
+
+        .comment {
+            @include styleFont(400, 1.6rem, 3rem, false);
+            width: 31rem;
+            text-align: left;
+        }
+    }
+}
+

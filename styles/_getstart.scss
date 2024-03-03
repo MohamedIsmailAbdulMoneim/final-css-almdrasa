@@ -13,7 +13,7 @@
     }
 
     &__light{
-        @include lightFont(1.6rem, 3ren)
+        @include styleFont(400, 1.6rem, 3ren)
     }
 }
 
