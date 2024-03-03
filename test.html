@@ -1,0 +1,12 @@
+$pagination-background: #f1f1f1; $pagination-color: #333;
+$pagination-hover-background: #f90; $pagination-hover-color: #fff;
+$pagination-border: 1px solid #ccc; $pagination-border-radius: 3px; .pagination
+{ display: flex; list-style: none; padding: 0; li { margin-right: 5px; a {
+display: block; padding: 5px 10px; text-decoration: none; color:
+$pagination-color; border: $pagination-border; border-radius:
+$pagination-border-radius; &:hover { background-color:
+$pagination-hover-background; color: $pagination-hover-color; } } } .prev, .next
+{ padding: 5px; border: $pagination-border; border-radius:
+$pagination-border-radius; cursor: pointer; &:hover { background-color:
+$pagination-hover-background; } } #page1:target ~ .prev a[href="#page5"],
+#page5:target ~ .next a[href="#page1"] { display: block; } }

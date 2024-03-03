@@ -54,9 +54,7 @@
     height: 24rem;
     justify-items: end;
     align-content: start;
-    // align-items: center;
     padding: var(--default-padding);
-    border: 2px solid var(--grayed-borders);
     border-radius: 1rem;
 
    
@@ -97,9 +95,37 @@
     }
 }
 
+.customer-one {
+    border: 2px solid var(--customer-border-one);
+}
+
+.customer-two {
+    border: 2px solid var(--customer-border-two);
+}
+
+.customer-three {
+    border: 2px solid var(--customer-border-three);
+}
+
 .slider {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__left {
+        display: flex;
+        margin-top: var(--default-padding);
+    
+    }
+
+    &__right {
+        
+        transform: translateY(1.5rem);
+    }
+
+
 }
+
+
 
 
 .radio {
@@ -112,8 +138,62 @@
     height: 1.5rem;
     border-radius: 50%;
     background-color: var(--radio-colors);
+    cursor: pointer;
 }
 
 .label:not(:first-child){
     margin-left: calc(var(--default-padding) / 2);
+}
+
+.input-one:checked + .label-one,
+.input-two:checked + .label-two,
+.input-three:checked + .label-three { 
+    width: 4.5rem;
+    background-color: var(--color-orange);
+    border-radius: 1rem;
+}
+
+html:has(.input-one:checked) {
+    --customer-border-one: var(--color-orange);
+    --customer-border-two: var(--border-gray);
+    --customer-border-three: var(--border-gray)
+}
+
+html:has(.input-two:checked){
+    --customer-border-one: var(--border-gray);
+    --customer-border-two: var(--color-orange)
+    --customer-border-three: var(--border-gray);
+}
+
+html:has(.input-three:checked){
+    --customer-border-one: var(--border-gray);
+    --customer-border-two: var(--border-gray);
+    --customer-border-three: var(--color-orange)
+
+}
+
+
+.subscribe {
+    width: 110rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    padding: calc(var(--default-padding) * 2);
+    transform: translateY(calc(var(--default-padding) ));
+    border-radius: calc(var(--default-padding) / 2);
+    z-index: 1;
+
+    &__headings {
+        &__bold {
+            @include styleFont(500, 3.5rem, 4.5rem, false);
+            width: 37.2rem            ;
+        }
+        &__light {
+            @include styleFont(400, 1.6rem, 3rem);
+            width: 37.2rem;
+        }
+    }
+    
 }

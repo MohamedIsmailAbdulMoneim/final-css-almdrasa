@@ -1,0 +1,67 @@
+@import "./mixins";
+
+.footer {
+    margin-top: -20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: var(--second-background);
+    padding: calc(var(--default-padding) * 8) calc(var(--default-padding)* 4) calc(var(--default-padding) / 2) calc(var(--default-padding) * 5) ;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: var(--default-padding)
+    }
+
+    &__description {
+        @include styleFont(400, 1.6rem, 3rem);
+        width: 34rem;
+
+        &__bold {
+            @include styleFont(500, 1.6rem, 3rem);
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: calc(var(--default-padding) / 8);
+        align-items: center;
+        justify-content: start;
+        margin-top: var(--default-padding);
+
+        &__image {
+            transform: translateX(-2rem);
+        }
+    }
+
+    &__copyright {
+        @include styleFont(400, 1.6rem, 3rem);
+        color: #AFB5C0;
+
+        &__bold {
+            @include styleFont(500, 1.6rem, 3rem);
+            color: #AFB5C0;
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: calc(var(--default-padding) * 3);
+        transform: translateX(var(--default-padding));
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--default-padding);
+            @include styleFont(400, 1.6rem, 3rem)
+        }
+
+        .footer-heading {
+            @include styleFont(500, 1.8rem, 3rem, false);
+            margin-bottom: calc(var(--default-padding) * 2);
+        }
+        
+    }
+}

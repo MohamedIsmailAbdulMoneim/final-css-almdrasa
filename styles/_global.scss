@@ -4,6 +4,12 @@ h1 {
     line-height: 7rem;
     width: 55rem;
 }
+@media (max-width: 1000px) {
+    html {
+      font-size: 8px;
+    }
+  }
+
 
 // h2 {
 //     font-weight: 500;
@@ -16,6 +22,30 @@ h1 {
     row-gap: 11rem;
     margin: 0 auto;
     max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
+}
+
+.logoContent {
+    display: flex;
+    align-items: center;
+    gap: var(--default-padding);
+
+    &__logo {
+        width: 100%;
+    }
+    
+    &__title {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        font-weight: 500;
+        color: var(--color-very-dark-blue);
+
+        &--span {
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-weight: 700;
+        }
+    }
+
 }
 
 .section {
