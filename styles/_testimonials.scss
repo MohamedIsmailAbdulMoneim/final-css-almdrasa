@@ -97,3 +97,23 @@
     }
 }
 
+.slider {
+    display: flex;
+}
+
+
+.radio {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--radio-colors);
+}
+
+.label:not(:first-child){
+    margin-left: calc(var(--default-padding) / 2);
+}

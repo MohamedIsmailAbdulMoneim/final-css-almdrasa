@@ -53,7 +53,8 @@ body {
   --gutter: 2rem;
   --default-padding: 2rem;
   --default-borders: #eeeff2;
-  --grayed-borders: #DDDDDD ;
+  --grayed-borders: #DDDDDD;
+  --radio-colors: #DDE0E4 ;
 }
 
 h1 {
@@ -426,4 +427,24 @@ h1 {
   color: var(--color-very-dark-blue);
   width: 31rem;
   text-align: left;
+}
+
+.slider {
+  display: flex;
+}
+
+.radio {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--radio-colors);
+}
+
+.label:not(:first-child) {
+  margin-left: calc(var(--default-padding) / 2);
 }/*# sourceMappingURL=style.css.map */
